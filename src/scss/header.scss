@@ -1,0 +1,153 @@
+//====================================================================================================
+.header {
+	padding-top: rem(40);
+	padding-bottom: rem(70);
+	// .header__container
+
+	&__container {
+		display: flex;
+		justify-content: center;
+	}
+
+	// .header__logo
+	&__logo {
+		img {
+			width: rem(116);
+			height: rem(119);
+		}
+	}
+
+	// .header__block
+	&__block {
+		position: relative;
+	}
+
+	// .header__title
+
+	&__title {
+	}
+
+	// .header__menu
+
+	&__menu {
+	}
+
+	
+}
+.title-header {
+	margin-bottom: rem(10);
+	&>span {
+		display: block;
+		text-align: center;
+		padding: rem(8);
+	}
+	// .title-header__top
+	&__top {
+		
+	}
+
+	// .title-header__center
+	&__center {
+		position: relative;
+		span {
+			text-transform: uppercase;
+			font-size: rem(40);
+			position: relative;
+			z-index: 2;
+		}
+		&::before{
+			content:'';
+			background-color: #882929;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+	}
+}
+.menu {
+	// .menu__icon
+	&__icon {
+	}
+
+	// .menu__body
+	&__body {
+	}
+
+	// .menu__list
+	&__list {
+		display: flex;
+	}
+
+	// .menu__item
+	&__item {
+		&:not(:last-child) {
+			margin-right: rem(20);
+		}
+	}
+
+	// .menu__link
+	&__link {
+		padding: rem(8);
+		font-size: rem(24);
+		text-transform: uppercase;
+		display: inline-block;
+		transition: border-bottom 0.3s ease 0s;
+		border-bottom: 1px solid transparent;
+		@media (any-hover: hover){
+			&:hover{
+				border-bottom: 1px solid #fff;
+			}
+		}
+	}
+}
+
+
+//====================================================================================================
+
+//Burger
+.icon-menu {
+	display: none;
+	@media (max-width: $mobile) {
+		display: block;
+		position: relative;
+		width: 30px;
+		height: 18px;
+		cursor: pointer;
+		z-index: 5;
+		span,
+		&::before,
+		&::after {
+			content: "";
+			transition: all 0.3s ease 0s;
+			left: 0px;
+			position: absolute;
+			width: 100%;
+			height: 2px;
+			background-color: #000;
+		}
+		&::before {
+			top: 0px;
+		}
+		&::after {
+			bottom: 0px;
+		}
+		span {
+			top: calc(50% - 1px);
+		}
+		.menu-open & {
+			span {
+				transform: scale(0);
+			}
+			&::before {
+				transform: rotate(-45deg);
+				top: calc(50% - 1px);
+			}
+			&::after {
+				transform: rotate(45deg);
+				bottom: calc(50% - 1px);
+			}
+		}
+	}
+}
