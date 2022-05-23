@@ -7,7 +7,7 @@
 // Подключаем слайдер Swiper из node_modules
 // При необходимости подключаем дополнительные модули слайдера, указывая их в {} через запятую
 // Пример: { Navigation, Autoplay }
-import Swiper, { Navigation } from 'swiper';
+import Swiper, { Navigation, Thumbs } from 'swiper';
 /*
 Основниые модули слайдера:
 Navigation, Pagination, Autoplay, 
@@ -45,11 +45,12 @@ function initSliders() {
 	bildSliders();
 
 	// Перечень слайдеров
-	if (document.querySelector('.swiper')) {
-		new Swiper('.swiper', {
+	if (document.querySelector('.main-slider__slider')) {
+		let mainSlider = new Swiper('.main-slider__slider', {
 			// Подключаем модули слайдера
 			// для конкретного случая
 			//modules: [Navigation, Pagination],
+			modules: [Thumbs],
 			/*
 			effect: 'fade',
 			autoplay: {
@@ -60,7 +61,7 @@ function initSliders() {
 			observer: true,
 			observeParents: true,
 			slidesPerView: 1,
-			spaceBetween: 0,
+			spaceBetween: 20,
 			autoHeight: true,
 			speed: 800,
 			//touchRatio: 0,
@@ -99,6 +100,70 @@ function initSliders() {
 				},
 			},
 			*/
+			on: {
+
+			}
+		});
+	}
+
+	if (document.querySelector('.thumbnail__slider')) {
+		new Swiper('.thumbnail__slider', {
+			// Подключаем модули слайдера
+			// для конкретного случая
+			//modules: [Navigation, Pagination],
+			modules: [Thumbs],
+			/*
+			effect: 'fade',
+			autoplay: {
+				delay: 3000,
+				disableOnInteraction: false,
+			},
+			*/
+			observer: true,
+			observeParents: true,
+			slidesPerView: 4,
+			spaceBetween: 30,
+			autoHeight: true,
+			speed: 800,
+			//touchRatio: 0,
+			//simulateTouch: false,
+			//loop: true,
+			//preloadImages: false,
+			//lazy: true,
+			// Dotts
+			//pagination: {
+			//	el: '.slider-quality__pagging',
+			//	clickable: true,
+			//},
+			// Arrows
+			navigation: {
+				nextEl: '.about__more .more__item_next',
+				prevEl: '.about__more .more__item_prev',
+			},
+			/*
+			breakpoints: {
+				320: {
+					slidesPerView: 1,
+					spaceBetween: 0,
+					autoHeight: true,
+				},
+				768: {
+					slidesPerView: 2,
+					spaceBetween: 20,
+				},
+				992: {
+					slidesPerView: 3,
+					spaceBetween: 20,
+				},
+				1268: {
+					slidesPerView: 4,
+					spaceBetween: 30,
+				},
+			},
+			*/
+			thumbs: {
+				swiper: mainSlider,
+			},
 			on: {
 
 			}
