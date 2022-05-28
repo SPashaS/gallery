@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 
 <head>
 	<title>Страница картины</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220527160803">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220528164056">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,17 +16,15 @@
 	<div class="wrapper">
 		<header class="header">
 			<div class="header__container">
-				<div class="header__wrapper">
-
-					<a href="#" class="header__logo">
+				<div class="header__block block-header">
+					<a href="#" class="block-header__logo">
 						<picture><source srcset="img/logo.webp" type="image/webp"><img src="img/logo.png" alt="Logo" title="logo"></picture>
 					</a>
-					<h2 class="header__subtitle">ARTIST of the 21st CENTURY</h2>
-					<div class="header__wrapper-item">
-						<h1 class="header__title">Yulia Olkhovaia</h1>
+					<h2 class="block-header__subtitle">ARTIST of the 21st CENTURY</h2>
+					<div class="block-header__wrapper-item">
+						<h1 class="block-header__title">Yulia Olkhovaia</h1>
 					</div>
-
-					<div class="header__menu menu">
+					<div class="block-header__menu menu">
 						<button type="button" class="menu__icon icon-menu"><span></span></button>
 						<nav class="menu__body">
 							<ul class="menu__list">
@@ -42,34 +40,6 @@
 
 			</div>
 		</header>
-
-		<!-- 
-<header class="header">
-	<div class="header__container">
-		<div class="header__wrapper">
-			<a href="#" class="header__logo">
-				<picture><source srcset="img/logo.webp" type="image/webp"><img src="img/logo.png" alt="Logo" title="logo"></picture>
-			</a>
-			<div class="header__block">
-				<h2 class="header__subtitle">ARTIST of the 21st CENTURY</h2>
-				<h1 class="header__title">Yulia Olkhovaia</h1>
-				<div class="header__menu menu">
-					<button type="button" class="menu__icon icon-menu"><span></span></button>
-					<nav class="menu__body">
-						<ul class="menu__list">               
-							<li class="menu__item"><a href="#" class="menu__link">Gallery</a></li>
-							<li class="menu__item"><a href="#" class="menu__link">shop</a></li>
-							<li class="menu__item"><a href="#" class="menu__link">About</a></li>
-							<li class="menu__item"><a href="#" class="menu__link">Contact</a></li>
-							<li class="menu__item"><a href="#" class="menu__link">FAQ</a></li>
-						</ul>
-					</nav>
-				</div>
-			</div>
-		</div>
-		
-	</div>
-</header> -->
 		<main class="page page_article">
 			<div class="page__container">
 				<article class="page__article article">
@@ -104,6 +74,7 @@
 									</div>
 								</div>
 							</div>
+							<h2 class="article__title">Two Satyrs</h2>
 							<div class="article__thumbnail thumbnail">
 								<div class="thumbnail__slider">
 									<div class="thumbnail__swiper">
@@ -154,6 +125,7 @@
 												techniques, but also the magical nature of art.
 											</p>
 										</div>
+										<a class="tabs-article__button" data-popup="#buy" href="#">To request</a>
 									</div>
 								</div>
 								<div class="tabs-article__body-item">
@@ -190,12 +162,14 @@
 												will retain its qualities even after 500 years.
 											</em>
 										</div>
+										<a class="tabs-article__button" data-popup="#buy" href="#">To request</a>
 									</div>
 								</div>
 								<div class="tabs-article__body-item">
 									<div class="tabs-article__body-wrapper">
 										<h3>Price / Delivery</h3>
 										<span class="tabs-article__price">Price 450 GBP</span>
+										<!-- <a class="tabs-article__button"  href="#">Sold</a> -->
 										<div class="tabs-article__body-inner">
 											<ul class="italic">
 												<li>- Purchase directly from the artist, avoiding gallery fees</li>
@@ -206,8 +180,8 @@
 												<li>- If you need other options, they are possible and paid separately.</li>
 											</ul>
 										</div>
-										<p class="tabs-article__email">To request a painting: <a href="mailto:Yulia.Olkhovaia@gmail.com">Yulia.Olkhovaia@gmail.com</a></p>
-										<a class="tabs-article__button" data-popup="#buy" href="#">Buy the painting</a>
+										<!-- <p class="tabs-article__email">To request a painting: <a href="mailto:Yulia.Olkhovaia@gmail.com">Yulia.Olkhovaia@gmail.com</a></p> -->
+										<a class="tabs-article__button" data-popup="#buy" href="#">To request</a>
 									</div>
 								</div>
 							</div>
@@ -220,11 +194,12 @@
 			<div class="footer__container">
 				<div class="footer__block">
 					<div class="footer__social social-footer">
-						<a href="#" class="social-footer__link _icon-instagram"></a>
+						<a href="#" class="social-footer__link _icon-youtube"></a>
 						<a href="#" class="social-footer__link _icon-facebook"></a>
+						<a href="#" class="social-footer__link _icon-instagram"></a>
 						<a href="#" class="social-footer__link _icon-telegram"></a>
 						<a href="#" class="social-footer__link _icon-etsy"></a>
-						<a href="#" class="social-footer__link _icon-youtube"></a>
+
 					</div>
 					<a href="mailto:Yulia.Olkhovaia@gmail.com" class="footer__email">Yulia.Olkhovaia@gmail.com</a>
 				</div>
@@ -235,16 +210,62 @@
 	<div id="buy" aria-hidden="true" class="popup">
 		<div class="popup__wrapper">
 			<div class="popup__content">
-				<button data-close type="button" class="popup__close">Закрыть</button>
-				<div class="popup__text">
-					Форма
+				<div class="popup__block-header block-header">
+					<div class="block-header__logo">
+						<picture><source srcset="img/logo.webp" type="image/webp"><img src="img/logo.png" alt="Logo" title="logo"></picture>
+					</div>
+					<div class="block-header__subtitle">ARTIST of the 21st CENTURY</div>
+					<div class="block-header__wrapper-item">
+						<div class="block-header__title">Yulia Olkhovaia</div>
+					</div>
 				</div>
+				<button data-close type="button" class="popup__close">X</button>
+				<h2 class="popup__title">To Request</h2>
+				<!-- <div class="popup__text"> -->
+				<div class="popup__form form">
+					<form action="#" id="form" class="form__body">
+						<div class="form__item">
+							<label for="formName" class="form__label">- Your name *</label>
+							<input id="formName" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="" class="form__input">
+						</div>
+
+						<div class="form__item">
+							<label for="formCountry" class="form__label">- Delivery Country *</label>
+							<input id="formCountry" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="" class="form__input">
+						</div>
+
+						<div class="form__item">
+							<div class="form__options options">
+								<div class="options__item">
+									<input id="formBuy" checked type="radio" name="action" value="Buy" class="options__input">
+									<label for="formBuy" class="options__label"><span class="options__label-title">- Buy</span><span class="options__label-square"></span></label>
+								</div>
+								<div class="options__item">
+									<input id="formCopy" type="radio" name="action" value="Copy" class="options__input">
+									<label for="formCopy" class="options__label"><span class="options__label-title">- Order Author's copy</span><span class="options__label-square"></span></label>
+								</div>
+								<div class="options__item">
+									<input id="formAnother" type="radio" name="action" value="Another" class="options__input">
+									<label for="formAnother" class="options__label"><span class="options__label-title">- Another</span><span class="options__label-square"></span></label>
+								</div>
+							</div>
+						</div>
+
+						<div class="form__item form__item_text">
+							<label for="formText" class="form__label">- Text</label>
+							<textarea id="formText" name="form[]" class="form__textarea"></textarea>
+						</div>
+
+						<button type="submit" name="form[]" data-error="Ошибка" class="form__button">Sent</button>
+					</form>
+				</div>
+				<!-- </div> -->
 			</div>
 		</div>
 	</div>
 
 
-	<script src="js/app.min.js?_v=20220527160803"></script>
+	<script src="js/app.min.js?_v=20220528164056"></script>
 </body>
 
 </html>
